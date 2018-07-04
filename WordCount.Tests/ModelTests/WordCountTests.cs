@@ -28,7 +28,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void GetSetUserWords_GetsSetsUserWords_String()
         {
-            //word setter PASSED
+            //word2 setter PASSED
             //Arrange
             WordCounter testWordCount = new WordCounter();
             string testWord = "bang bang bang";
@@ -38,6 +38,21 @@ namespace WordCount.Tests.ModelTests
 
             //Assert
             Assert.AreEqual("bang bang bang", testWordCount.GetWords(testWord));
+        }
+
+        [TestMethod]
+        public void GetsWordsString_SplitsStringToArray_String()
+        {
+            //words to array
+            //Arrange
+            WordCounter testWordCount = new WordCounter();
+
+            //Act
+            string words = "crash bang boom";
+            string[] testList = { "crash", "bang", "boom" };
+
+            //Assert
+            CollectionAssert.AreEqual(testList, testWordCount.splitString(words));
         }
     }
 }
