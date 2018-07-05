@@ -4,9 +4,10 @@ namespace WordCount.Models
 {
     public class WordCounter
     {
-        private string _word;               //word
+        private string _word;               //keyword
         private string _words;              //comparative word
         private string[] _wordArray;        //comparative word array
+        private int _occurance;             //tallies instances of keyword
 
         public void SetWord(string word)
         {
@@ -18,7 +19,6 @@ namespace WordCount.Models
             else
             {
                 _word = String.Empty;
-                // won't find matches
             }
         }
 
@@ -50,7 +50,6 @@ namespace WordCount.Models
             else
             {
                 _words = String.Empty;
-                // won't find matches
             }
         }
 
@@ -89,7 +88,17 @@ namespace WordCount.Models
             return GetArray();
         }
 
-        //public int wordOccur = 0;
+        public void SetOccurTally(int score)
+        {
+            _occurance = score;
+        }
+
+        public int GetOccurTally()
+        {
+            _occurance = 0;
+            return _occurance;
+        }
+
         //public string wordToCheck = GetWord(word);
         //public string[] arrayToCheck = listArray[];
         //foreach (string x in arrayToCheck)

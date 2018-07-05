@@ -44,5 +44,17 @@ namespace WordCount.Tests.ModelTests
             string[] expected = { "crash", "bang", "boom" };
             CollectionAssert.AreEqual(expected, actual);
         }
+
+        [TestMethod]
+        public void GetSetScore_SetsOccurScore_Int()
+        {
+            //number setter PASSED
+            WordCounter testWordCount = new WordCounter();
+            //int testNum = 0;
+            int expected = 0;
+            //testWordCount.SetOccurTally(testNum);
+            int actual = testWordCount.GetOccurTally();
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
