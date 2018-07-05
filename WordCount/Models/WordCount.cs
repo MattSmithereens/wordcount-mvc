@@ -18,7 +18,7 @@ namespace WordCount.Models
             else
             {
                 _word = String.Empty;
-                // figure out error handler
+                // won't find matches
             }
         }
 
@@ -42,12 +42,34 @@ namespace WordCount.Models
 
         public void SetWords(string words)
         {
-            _words = words;
+            if (this.WordsLettersOnly(words))
+            {
+                string LowCaseWords = words.ToLower();
+                _words = LowCaseWords;
+            }
+            else
+            {
+                _words = String.Empty;
+                // won't find matches
+            }
         }
 
         public string GetWords(string words)
         {
             return _words;
+        }
+
+        public bool WordsLettersOnly(string words)
+        {
+            char[] lettersArray = words.ToCharArray();
+            foreach (char x in lettersArray)
+            {
+                if (Char.IsLetter(x))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void SetArray(string[] cutWords)

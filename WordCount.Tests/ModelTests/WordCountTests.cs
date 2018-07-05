@@ -27,8 +27,8 @@ namespace WordCount.Tests.ModelTests
         {
             //word setter PASSED
             WordCounter testWordCount = new WordCounter();
-            string testWords = "bang";
-            string expected = "bang";
+            string testWords = "CRASH BANG BOOM";
+            string expected = "crash bang boom";
             testWordCount.SetWords(testWords);
             string actual = testWordCount.GetWords(testWords);
             Assert.AreEqual(expected, actual);
