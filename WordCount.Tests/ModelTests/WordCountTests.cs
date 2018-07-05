@@ -83,7 +83,7 @@ namespace WordCount.Tests.ModelTests
             //WordCounter.SetWord("bang");
             //WordCounter.GetWord();
             string[] compareWords = { "chitty", "chitty", "bang", "bang", "bang" };
-            int expected = 2;
+            int expected = 3;
             int actual = testWordCount.WordOccurs(compareWords);
             Assert.AreEqual(expected, actual);
         }
