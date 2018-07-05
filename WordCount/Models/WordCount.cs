@@ -4,7 +4,7 @@ namespace WordCount.Models
 {
     public class WordCounter
     {
-        private string _word;               //keyword
+        private string _keyWord;           //keyword
         private string _words;              //comparative word
         private string[] _wordArray;        //comparative word array
         private int _occurance;             //tallies instances of keyword
@@ -20,27 +20,27 @@ namespace WordCount.Models
             return _occurance;
         }
 
-        public void SetWord(string word)
+        public void SetWord(string keyWord)
         {
-            if (this.WordLettersOnly(word))
+            if (this.WordLettersOnly(keyWord))
             {
-                string LowCaseWord = word.ToLower();
-                _word = LowCaseWord;
+                string LowCaseWord = keyWord.ToLower();
+                _keyWord = LowCaseWord;
             }
             else
             {
-                _word = String.Empty;
+                _keyWord = String.Empty;
             }
         }
 
         public string GetWord(string word)
         {
-            return _word;
+            return _keyWord;
         }
 
-        public bool WordLettersOnly(string word)
+        public bool WordLettersOnly(string keyWord)
         {
-            char[] letterArray = word.ToCharArray();
+            char[] letterArray = keyWord.ToCharArray();
             foreach (char x in letterArray)
             {
                 if(Char.IsLetter(x))
@@ -104,7 +104,7 @@ namespace WordCount.Models
             int i = GetOccurTally();
             foreach (string word in array)
             {
-                if (word == "bang")
+                if (word == "bang")    //GetWord() value for testing 
                 {
                     i++;
                 }
