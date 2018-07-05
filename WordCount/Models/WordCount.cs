@@ -7,17 +7,37 @@ namespace WordCount.Models
         private string _word;               //word
         private string _words;              //comparative word
         private string[] _wordArray;        //comparative word array
-        //private string _match;              //word match
-        //private int _wordOccur = 0;         //word match score/occurences
 
         public void SetWord(string word)
         {
-            _word = word;
+            if (this.WordLettersOnly(word))
+            {
+                string LowCaseWord = word.ToLower();
+                _word = LowCaseWord;
+            }
+            else
+            {
+                _word = String.Empty;
+                // figure out error handler
+            }
         }
 
         public string GetWord(string word)
         {
             return _word;
+        }
+
+        public bool WordLettersOnly(string word)
+        {
+            char[] letterArray = word.ToCharArray();
+            foreach (char x in letterArray)
+            {
+                if(Char.IsLetter(x))
+                {
+                    return true;
+                }
+            }
+            return false;
         }
 
         public void SetWords(string words)
@@ -46,5 +66,17 @@ namespace WordCount.Models
             SetArray(listArray);
             return GetArray();
         }
+
+        //public int wordOccur = 0;
+        //public string wordToCheck = GetWord(word);
+        //public string[] arrayToCheck = listArray[];
+        //foreach (string x in arrayToCheck)
+        //{
+        //    foreach (arrayToCheck.Contains(x))
+        //    {
+        //        wordOccur ++;
+        //    }    
+        //}            
+
     }
 }

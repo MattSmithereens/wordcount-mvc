@@ -16,7 +16,7 @@ namespace WordCount.Tests.ModelTests
             //word setter PASSED
             //Arrange
             WordCounter testWordCount = new WordCounter();
-            string testWord = "crash";
+            string testWord = "CRASH";
 
             //Act
             testWordCount.SetWord(testWord);
@@ -43,7 +43,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void GetsWordsString_SplitsStringToArray_String()
         {
-            //words to array
+            //words to array PASSED
             //Arrange
             WordCounter testWordCount = new WordCounter();
 
