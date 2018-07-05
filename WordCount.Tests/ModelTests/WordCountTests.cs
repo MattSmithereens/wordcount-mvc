@@ -13,7 +13,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void GetSetUserWord_SetsUserWordToLower_String()
         {
-            //word setter PASSED
+            // PASSED
             WordCounter testWordCount = new WordCounter();
             string testWord = "CRASH";
             string expected = "crash";
@@ -25,7 +25,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void GetSetUserWords_SetsUserWordToLower_String()
         {
-            //word setter PASSED
+            // PASSED
             WordCounter testWordCount = new WordCounter();
             string testWords = "CRASH BANG BOOM";
             string expected = "crash bang boom";
@@ -48,12 +48,23 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void GetSetScore_SetsOccurScore_Int()
         {
-            //number setter PASSED
-            WordCounter testWordCount = new WordCounter();
-            //int testNum = 0;
+            // PASSED
+            WordCounter testWordCount = new WordCounter();;
             int expected = 0;
-            //testWordCount.SetOccurTally(testNum);
             int actual = testWordCount.GetOccurTally();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
+        public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
+        {
+            WordCounter testWordCount = new WordCounter();
+            string keyWord = "bang";
+            WordCounter.SetWord(keyWord);
+            WordCounter.GetWord();
+            string[] compareWords = { "chitty", "chitty", "bang", "bang" };
+            int expected = 2;
+            int actual = testWordCount.WordOccurs(compareWords);
             Assert.AreEqual(expected, actual);
         }
     }

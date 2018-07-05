@@ -99,6 +99,19 @@ namespace WordCount.Models
             return _occurance;
         }
 
+        public int WordOccurs(string[] array)
+        {
+            int i = GetOccurTally();
+            foreach (string word in splitString())
+            {
+                if (word == GetWord())
+                {
+                    i++;
+                }
+            }
+            return i;
+        }
+
         //public string wordToCheck = GetWord(word);
         //public string[] arrayToCheck = listArray[];
         //foreach (string x in arrayToCheck)
