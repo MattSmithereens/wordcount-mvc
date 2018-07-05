@@ -11,6 +11,16 @@ namespace WordCount.Tests.ModelTests
     public class WordCountTests
     {
         [TestMethod]
+        public void GetSetScore_SetsOccurScore_Int()
+        {
+            // PASSED
+            WordCounter testWordCount = new WordCounter(); ;
+            int expected = 0;
+            int actual = testWordCount.GetOccurTally();
+            Assert.AreEqual(expected, actual);
+        }
+
+        [TestMethod]
         public void GetSetUserWord_SetsUserWordToLower_String()
         {
             // PASSED
@@ -46,26 +56,36 @@ namespace WordCount.Tests.ModelTests
         }
 
         [TestMethod]
-        public void GetSetScore_SetsOccurScore_Int()
+        public void WordLettersOnly_CheckForNonLetters_Bool()
         {
-            // PASSED
-            WordCounter testWordCount = new WordCounter();;
-            int expected = 0;
-            int actual = testWordCount.GetOccurTally();
+            WordCounter testWordCount = new WordCounter();
+            string testWord = "123";
+            bool expected = false;
+            bool actual = testWordCount.WordLettersOnly(testWord);
             Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
+        public void WordsLettersOnly_CheckForNonLetters_Bool()
         {
             WordCounter testWordCount = new WordCounter();
-            string keyWord = "bang";
-            WordCounter.SetWord(keyWord);
-            WordCounter.GetWord();
-            string[] compareWords = { "chitty", "chitty", "bang", "bang" };
-            int expected = 2;
-            int actual = testWordCount.WordOccurs(compareWords);
+            string testWords = "crash bang boom";
+            bool expected = true;
+            bool actual = testWordCount.WordsLettersOnly(testWords);
             Assert.AreEqual(expected, actual);
         }
+
+        //[TestMethod]
+        //public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
+        //{
+        //    WordCounter testWordCount = new WordCounter();
+        //    string keyWord = "bang";
+        //    WordCounter.SetWord(keyWord);
+        //    WordCounter.GetWord();
+        //    string[] compareWords = { "chitty", "chitty", "bang", "bang" };
+        //    int expected = 2;
+        //    int actual = testWordCount.WordOccurs(compareWords);
+        //    Assert.AreEqual(expected, actual);
+        //}
     }
 }

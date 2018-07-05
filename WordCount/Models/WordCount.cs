@@ -9,6 +9,17 @@ namespace WordCount.Models
         private string[] _wordArray;        //comparative word array
         private int _occurance;             //tallies instances of keyword
 
+        public void SetOccurTally(int score)
+        {
+            _occurance = score;
+        }
+
+        public int GetOccurTally()
+        {
+            _occurance = 0;
+            return _occurance;
+        }
+
         public void SetWord(string word)
         {
             if (this.WordLettersOnly(word))
@@ -81,46 +92,24 @@ namespace WordCount.Models
             return _wordArray;
         }
 
-        public string[] splitString(string words)
+        public string[] splitString(string lowCaseWords)
         {
-            string[] listArray = words.Split();
+            string[] listArray = lowCaseWords.Split();
             SetArray(listArray);
             return GetArray();
         }
 
-        public void SetOccurTally(int score)
-        {
-            _occurance = score;
-        }
-
-        public int GetOccurTally()
-        {
-            _occurance = 0;
-            return _occurance;
-        }
-
-        public int WordOccurs(string[] array)
-        {
-            int i = GetOccurTally();
-            foreach (string word in splitString())
-            {
-                if (word == GetWord())
-                {
-                    i++;
-                }
-            }
-            return i;
-        }
-
-        //public string wordToCheck = GetWord(word);
-        //public string[] arrayToCheck = listArray[];
-        //foreach (string x in arrayToCheck)
+        //public int WordOccurs(string[] array)
         //{
-        //    foreach (arrayToCheck.Contains(x))
+        //    int i = GetOccurTally();
+        //    foreach (string lowCaseWord in splitString())
         //    {
-        //        wordOccur ++;
-        //    }    
-        //}            
-
+        //        if (word == GetWord())
+        //        {
+        //            i++;
+        //        }
+        //    }
+        //    return i;
+        //}                 
     }
 }
