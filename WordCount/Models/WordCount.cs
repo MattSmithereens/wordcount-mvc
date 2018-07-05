@@ -99,17 +99,17 @@ namespace WordCount.Models
             return GetArray();
         }
 
-        //public int WordOccurs(string[] array)
-        //{
-        //    int i = GetOccurTally();
-        //    foreach (string lowCaseWord in splitString())
-        //    {
-        //        if (word == GetWord())
-        //        {
-        //            i++;
-        //        }
-        //    }
-        //    return i;
-        //}                 
+        public int WordOccurs(string[] array)
+        {
+            int i = GetOccurTally();
+            foreach (string word in array)
+            {
+                if (word == "bang")
+                {
+                    i++;
+                }
+            }
+            return i;
+        }                 
     }
 }

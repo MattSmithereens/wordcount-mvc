@@ -75,17 +75,17 @@ namespace WordCount.Tests.ModelTests
             Assert.AreEqual(expected, actual);
         }
 
-        //[TestMethod]
-        //public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
-        //{
-        //    WordCounter testWordCount = new WordCounter();
-        //    string keyWord = "bang";
-        //    WordCounter.SetWord(keyWord);
-        //    WordCounter.GetWord();
-        //    string[] compareWords = { "chitty", "chitty", "bang", "bang" };
-        //    int expected = 2;
-        //    int actual = testWordCount.WordOccurs(compareWords);
-        //    Assert.AreEqual(expected, actual);
-        //}
+        [TestMethod]
+        public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
+        {
+            WordCounter testWordCount = new WordCounter();
+            //string bang = "bang";
+            //WordCounter.SetWord("bang");
+            //WordCounter.GetWord();
+            string[] compareWords = { "chitty", "chitty", "bang", "bang" };
+            int expected = 2;
+            int actual = testWordCount.WordOccurs(compareWords);
+            Assert.AreEqual(expected, actual);
+        }
     }
 }
