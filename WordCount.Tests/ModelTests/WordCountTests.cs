@@ -11,48 +11,38 @@ namespace WordCount.Tests.ModelTests
     public class WordCountTests
     {
         [TestMethod]
-        public void GetSetUserWord_GetsSetsUserWord_String()
+        public void GetSetUserWord_SetsUserWordToLower_String()
         {
             //word setter PASSED
-            //Arrange
             WordCounter testWordCount = new WordCounter();
             string testWord = "CRASH";
-
-            //Act
+            string expected = "crash";
             testWordCount.SetWord(testWord);
-
-            //Assert
-            Assert.AreEqual("crash", testWordCount.GetWord(testWord));
+            string actual = testWordCount.GetWord(testWord);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void GetSetUserWords_GetsSetsUserWords_String()
+        public void GetSetUserWords_SetsUserWordToLower_String()
         {
-            //word2 setter PASSED
-            //Arrange
+            //word setter PASSED
             WordCounter testWordCount = new WordCounter();
-            string testWord = "bang bang bang";
-
-            //Act
-            testWordCount.SetWords(testWord);
-
-            //Assert
-            Assert.AreEqual("bang bang bang", testWordCount.GetWords(testWord));
+            string testWords = "bang";
+            string expected = "bang";
+            testWordCount.SetWords(testWords);
+            string actual = testWordCount.GetWords(testWords);
+            Assert.AreEqual(expected, actual);
         }
 
         [TestMethod]
-        public void GetsWordsString_SplitsStringToArray_String()
+        public void GetsWordsString_SplitsStringToArray_Array()
         {
-            //words to array PASSED
-            //Arrange
+            // PASSED
             WordCounter testWordCount = new WordCounter();
-
-            //Act
             string words = "crash bang boom";
-            string[] testList = { "crash", "bang", "boom" };
-
-            //Assert
-            CollectionAssert.AreEqual(testList, testWordCount.splitString(words));
+            string[] actual = testWordCount.splitString(words);
+            string[] expected = { "crash", "bang", "boom" };
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }
