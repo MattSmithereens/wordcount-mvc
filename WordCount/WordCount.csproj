@@ -33,7 +33,7 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\index.cshtml" />
-    <None Include="Views\Home\new-counter.cshtml" />
+    <None Include="Views\Home\counter.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Properties\launchSettings.json" />
   </ItemGroup>
