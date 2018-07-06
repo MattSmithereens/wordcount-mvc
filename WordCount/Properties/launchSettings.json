@@ -1,0 +1,8 @@
+﻿using System; namespace WordCount.Properties {
+  public class
+  launchSettings {
+    public launchSettings()
+    {
+    }
+  }
+}
