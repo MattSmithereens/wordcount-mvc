@@ -58,6 +58,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void WordLettersOnly_CheckForNonLetters_Bool()
         {
+            // PASSED
             WordCounter testWordCount = new WordCounter();
             string testWord = "123";
             bool expected = false;
@@ -68,6 +69,7 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void WordsLettersOnly_CheckForNonLetters_Bool()
         {
+            //PASSED
             WordCounter testWordCount = new WordCounter();
             string testWords = "crash bang boom";
             bool expected = true;
@@ -78,10 +80,11 @@ namespace WordCount.Tests.ModelTests
         [TestMethod]
         public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
         {
+            //PASSED
             WordCounter testWordCount = new WordCounter();
             string lowCaseWord = "bang";
-            string[] compareWords = { "chitty", "chitty", "bang", "bang", "bang" };
-            int expected = 3;
+            string[] compareWords = { "chitty", "bangbang", "bang", "bang" };
+            int expected = 2;
             int actual = testWordCount.WordOccurs(compareWords, lowCaseWord);
             Assert.AreEqual(expected, actual);
         }

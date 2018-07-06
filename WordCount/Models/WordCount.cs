@@ -106,7 +106,7 @@ namespace WordCount.Models
             int i = GetOccurTally();
             foreach (string word in listArray)
             {
-                if (word == lowCaseWord)    //GetWord() value for testing 
+                if (word == lowCaseWord) 
                 {
                     i++;
                 }
