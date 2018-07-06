@@ -15,7 +15,6 @@ namespace WordCount.Controllers
             return View();
         }
 
-
         [HttpGet("/counter")]
         public ActionResult counter()
         {

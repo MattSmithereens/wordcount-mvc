@@ -30,11 +30,13 @@
     <Content Remove="Views\Home\new-counter.cshtml" />
     <Content Remove="Views\Shared\_Layout.cshtml" />
     <Content Remove="Properties\launchSettings.json" />
+    <Content Remove="Views\Home\result.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\index.cshtml" />
     <None Include="Views\Home\counter.cshtml" />
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Properties\launchSettings.json" />
+    <None Include="Views\Home\result.cshtml" />
   </ItemGroup>
 </Project>
