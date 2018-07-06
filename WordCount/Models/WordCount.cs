@@ -4,7 +4,7 @@ namespace WordCount.Models
 {
     public class WordCounter
     {
-        private string _keyWord;           //keyword
+        private string _keyWord;            //keyword
         private string _words;              //comparative word
         private string[] _wordArray;        //comparative word array
         private int _occurance;             //tallies instances of keyword
@@ -43,7 +43,8 @@ namespace WordCount.Models
             char[] letterArray = keyWord.ToCharArray();
             foreach (char x in letterArray)
             {
-                if(Char.IsLetter(x))
+                //if(Char.)
+                if(Char.IsLetter(x)) // put in something to sense multiple words
                 {
                     return true;
                 }
@@ -98,6 +99,13 @@ namespace WordCount.Models
             SetArray(listArray);
             return GetArray();
         }
+
+        //DAFUQ
+        //public void WordCounting(string lowCaseWord, string[] listArray)
+        //{
+        //    _words = listArray;
+        //    _keyWord = LowCaseWord;
+        //}
 
         public int WordOccurs(string[] array)
         {
