@@ -100,19 +100,13 @@ namespace WordCount.Models
             return GetArray();
         }
 
-        //DAFUQ
-        //public void WordCounting(string lowCaseWord, string[] listArray)
-        //{
-        //    _words = listArray;
-        //    _keyWord = LowCaseWord;
-        //}
 
-        public int WordOccurs(string[] array)
+        public int WordOccurs(string[] listArray, string lowCaseWord)
         {
             int i = GetOccurTally();
-            foreach (string word in array)
+            foreach (string word in listArray)
             {
-                if (word == "bang")    //GetWord() value for testing 
+                if (word == lowCaseWord)    //GetWord() value for testing 
                 {
                     i++;
                 }

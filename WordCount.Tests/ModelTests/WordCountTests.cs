@@ -79,12 +79,10 @@ namespace WordCount.Tests.ModelTests
         public void CheckWordAgainstSentenceWords_OccurenceRaisesScore_Int()
         {
             WordCounter testWordCount = new WordCounter();
-            //string bang = "bang";
-            //WordCounter.SetWord("bang");
-            //WordCounter.GetWord();
+            string lowCaseWord = "bang";
             string[] compareWords = { "chitty", "chitty", "bang", "bang", "bang" };
             int expected = 3;
-            int actual = testWordCount.WordOccurs(compareWords);
+            int actual = testWordCount.WordOccurs(compareWords, lowCaseWord);
             Assert.AreEqual(expected, actual);
         }
     }
