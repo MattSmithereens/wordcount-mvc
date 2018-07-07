@@ -26,7 +26,7 @@ A program that checks how frequently a word appears in a given string. The progr
 ## Setup/Contribution Requirements
 
 1. Follow the instructions for downloading C#, .NET Core 1.1 and Mono from: https://www.learnhowtoprogram.com/c/getting-started-with-c/installing-c
-1. Clone the repo at https://github.com/MattSmithereens/WordCount
+1. Clone the repo at https://github.com/MattSmithereens/wordcount-mvc
 1. Open WordCount.Solution.sln in Microsoft Visual Studio and click the play button on the top left.  Alternately, use BASH to navigate into the directory and type `dotnet restore`
 1. Make a new branch
 1. Commit and push your changes
@@ -42,7 +42,7 @@ A program that checks how frequently a word appears in a given string. The progr
 
 ## Links
 
-* Github Repository: https://github.com/MattSmithereens/WordCount
+* Github Repository: https://github.com/MattSmithereens/wordcount-mvc
 
 ## License
 
