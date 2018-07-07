@@ -1,11 +1,23 @@
 ﻿@{
-  Layout = "_Layout";
+    Layout = "_Layout";
 }
 
 
-<form action="/counter" method="post">
-    <label>Enter a word and a phrase.  I'll tell you if the phrase contains the word.</label><br>
-    <input id="keyWord" name="new-counter"><br>
-    <input id="compareWord" name="new-counter"><br>
-    <button type='submit'>Enter a Phrase</button>
+
+<label>Enter a word and a phrase.  I'll tell you if the phrase contains the word.</label><br>
+<div>
+<form action="/formLib">
+    <div class="form-group">
+        <label for="checkWord">Enter your word</label>
+        <input id="checkWord" name="checkWord" class="form-control" type="text">
+    </div>
+    <div class="form-group">
+        <label for="checkPhrase">Enter a phrase</label>
+        <input id="checkPhrase" name="checkPhrase" class="form-control" type="text">
+    </div>
+    <div>
+        <button type="submit" class="btn">Let's Compare!</button>
+    </div>
+</div>
 </form>
+

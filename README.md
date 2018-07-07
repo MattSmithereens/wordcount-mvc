@@ -22,6 +22,7 @@ A program that checks how frequently a word appears in a given string. The progr
 ## Known Bugs
 
 1. The C# model program presently does not filter out non-alphabetic characters.  The filter allows for special characters to pass through given that they are adjacent to alphabetic characters.  Thus, "b@ng" would pass through whereas "#$%" would not.  Amusingly enough, in the program's present state, "b@ng" would throw a match if the corresponding compare sentence contained "b@ng"
+1. as of right now, one can enter multiple words into the keyword field which will not be broken up.
 
 ## Setup/Contribution Requirements
 
