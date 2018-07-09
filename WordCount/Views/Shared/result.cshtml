@@ -3,10 +3,12 @@
 }
 
 <div>
-    GetOccurTally = @Model.GetOccurTally()<br />
-    @*SetWord = @Model.SetWord()<br />*@
-    @*GetWords = @Model.GetWords()<br />*@
-    GetArray = @Model.GetArray()<br />
 
+    <strong>@Model.GetWord("getWord")</strong> appears in the phrase <strong>@Model.GetWords("getWords")</strong><br />
+    @*<strong>@Model.GetOccurTally("getW)<br /></strong> times.*@
+
+    @*@Model.WordOccurs("getWords", "getWord")<br />*@
+
+    <p><a href="/counter">Let's try different words!</a> </p>
 
 </div>
