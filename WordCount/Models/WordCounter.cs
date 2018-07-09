@@ -103,15 +103,18 @@ namespace WordCount.Models
 
         public int WordOccurs(string[] listArray, string lowCaseWord)
         {
+          if(WordsLettersOnly())
+          {
             int i = GetOccurTally();
             foreach (string word in listArray)
             {
-                if (word == lowCaseWord) 
-                {
-                    i++;
-                }
+              if (word == lowCaseWord)
+              {
+                i++;
+              }
             }
             return i;
-        }                 
+          }
+        }
     }
 }

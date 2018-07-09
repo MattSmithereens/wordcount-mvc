@@ -9,17 +9,10 @@ namespace WordCount.Controllers
 {
     public class HomeController : Controller
     {
-        
+
         public IActionResult Index()
         {
             return View();
         }
-
-        [HttpGet("/counter")]
-        public ActionResult counter()
-        {
-            return View();
-        }
-               
     }
 }
