@@ -4,11 +4,10 @@
 
 <div>
 
-    <strong class="red">@Model.GetWord("getWord")</strong> appears in the phrase <strong class="red">@Model.GetWords("getWords")</strong><br />
-    @*<strong>@Model.GetOccurTally("getW)<br /></strong> times.*@
+    <p><strong>"@Model.GetWord("getWord")"</strong> appears in the phrase <strong>"@Model.GetWords("getWords")"</strong><br />
+    @*<strong>@Model.WordOccurs("compareWords", "lowCaseWord")</strong>*@
+    @Model.GetOccurTally() times.</p>
 
-    @*@Model.WordOccurs("getWords", "getWord")<br />*@
-
-    <p><a href="/counter">Let's try different words!</a> </p>
+    <p><a href="/counter">Let's try different words!</a></p>
 
 </div>
