@@ -18,8 +18,5 @@ namespace WordCount.Controllers
             inputVariable.SetWords(Request.Query["checkPhrase"]);
             return View("result", inputVariable);
         }
-
-
-
     }
 }
