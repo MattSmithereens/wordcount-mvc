@@ -10,14 +10,16 @@ namespace WordCount.Controllers
     public class ModelsController : Controller
     {
 
-    [Route("/formLib")]
-    public ActionResult WordCompare()
-    {
-        WordCounter inputVariable = new WordCounter();
-        inputVariable.SetWord(Request.Query["checkWord"]);
-        inputVariable.SetWords(Request.Query["checkPhrase"]);
-        return View("result", inputVariable);
-    }
+        [Route("/formLib")]
+        public ActionResult WordCompare()
+        {
+            WordCounter inputVariable = new WordCounter();
+            inputVariable.SetWord(Request.Query["checkWord"]);
+            inputVariable.SetWords(Request.Query["checkPhrase"]);
+            return View("result", inputVariable);
+        }
+
+
 
     }
 }

@@ -24,6 +24,9 @@
     <Folder Include="Views\Home\" />
     <Folder Include="Views\Shared\" />
     <Folder Include="Properties\" />
+    <Folder Include="wwwroot\" />
+    <Folder Include="wwwroot\css\" />
+    <Folder Include="wwwroot\img\" />
   </ItemGroup>
   <ItemGroup>
     <Content Remove="Views\Home\index.cshtml" />
@@ -31,6 +34,7 @@
     <Content Remove="Views\Shared\_Layout.cshtml" />
     <Content Remove="Properties\launchSettings.json" />
     <Content Remove="Views\Shared\result.cshtml" />
+    <Content Remove="wwwroot\css\styles.css" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Views\Home\index.cshtml" />
@@ -38,5 +42,6 @@
     <None Include="Views\Shared\_Layout.cshtml" />
     <None Include="Properties\launchSettings.json" />
     <None Include="Views\Shared\result.cshtml" />
+    <None Include="wwwroot\css\styles.css" />
   </ItemGroup>
 </Project>
